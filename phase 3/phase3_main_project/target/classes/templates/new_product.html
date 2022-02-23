@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<meta charset="ISO-8859-1">
+<title>Create New Category</title>
+</head>
+<body>
+<center><div aling="center">
+ <h1><b><i><font color="green"><u>Create New Product</u></font></i></b></h1>
+    <br/>
+     <form action="#" th:action="@{/saveproduct}" th:object="${product}"
+            method="post">
+ 
+            <table border="29" cellpadding="15" >
+                <tr>
+                    <td><b>Product Name:</b></td>
+                    <td><input type="text" th:field="*{productName}"  placeholder="Product Name"/></td>
+                </tr>  
+                <tr>
+                    <td><b>Category:</b></td>
+                    <td><input type="text" th:field="*{category}" placeholder="Category"/></td>
+                </tr> 
+                <tr>
+                    <td><b>Price:</b></td>
+                    <td><input type="text" th:field="*{price}" placeholder="Price"/></td>
+                </tr> 
+                <tr>
+                    <td><b>size:</b></td>
+                    <td><input type="text" th:field="*{size}" placeholder="Available sizes"/></td>
+                </tr> 
+                <tr>
+                    <td><b>Status:</b></td>
+                    <td><input type="text" th:field="*{status}" placeholder="1 for Available/0 for notAvai"/></td>
+                </tr> 
+                
+                                        
+                <tr>
+                    <td colspan="2"><button type="submit" class="btn btn-info"><b>Save</b></button> </td>
+                </tr>
+            </table>
+        </form>
+   
+
+
+</div></center>
+</body>
+</html>

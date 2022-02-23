@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sporty Shoes</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div aling="center">
+<center><h2><b><i><font color="green">Welcome To Sporty Shoes Application!!!</font></i></b></h2></center>
+<br>
+<br>
+	<table width="100%" height="100%" border="0" cellpadding="0"
+		align="center">
+		<tr>
+			<td align="center" valign="middle">
+				<table class="table-bordered" width="350" border="0" cellpadding="3"
+					cellspacing="3" bgcolor="#00ffff">
+
+					<form action="#" th:action="@{/adminlogin}" th:object="${user}"
+						method="post">
+
+
+						<tr>
+							<td height="25" colspan="2" align="left" valign="middle"
+								bgcolor="#808080" class="style2">
+								<div align="center">
+									<strong>Admin Login</strong>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Username</td>
+							<td><input type="text" th:field="*{username}"
+								class="form-control" placeholder="User Name"/></td>
+						</tr>
+						<tr>
+							<td>Password</td>
+							<td><input type="password" th:field="*{password}"
+								class="form-control" placeholder="Password"/></td>
+						</tr>
+						<tr>
+							<td>New Password</td>
+							<td><input type="password" th:field="*{newPassword}"
+								class="form-control" placeholder="New Password"/></td>
+						</tr>
+						<tr>
+							<td colspan="2"><center><button type="submit" class="btn btn-info"
+									align="right">login/changepassword</button></center></td>
+						</tr>						
+					</form>
+
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

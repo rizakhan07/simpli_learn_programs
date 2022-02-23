@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<meta charset="ISO-8859-1">
+<title>Manage Product Unit</title>
+</head>
+<body>
+<div align="center">
+<h1><u><b><i>Products List</i></b></u></h1><br>
+<h2><b><a href="/newproduct"><i>Create New ProductList</i></a></b></h2>
+<br>
+<table border="1" cellpadding="10">
+<thead>
+<tr>
+<th>Product id</th>
+<th>Product Name</th>
+<th>Category</th>
+<th>Price</th>
+<th>size</th>
+<th>Status</th>
+
+</tr>
+</thead>
+<tbody>
+<tr th:each="product : ${listProduct}">
+<td th:text="${product.id}">Product id</td>
+<td th:text="${product.productName}">Product Name</td>
+<td th:text="${product.category}">Category</td>
+<td th:text="${product.price}">Price</td>
+<td th:text="${product.size}">size</td>
+<td th:text="${product.status}">Status</td>
+
+</tr></tbody>
+</table>
+<br>
+<a href="/logout" type="submit" class="btn btn-warning"><h3><b>LogOut</b></h3></a>
+</div>
+</body>
+</html>
+                 
